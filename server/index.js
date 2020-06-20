@@ -42,7 +42,8 @@ if (process.env.NODE_ENV === "production") {
 
   // index.html for all page routes
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "../client", "build", "index.html"));
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+    // res.sendFile(path.resolve(__dirname, "../client", "build", "index.html"));
   });
 }
 // process.env.PORT for setting the port for deployment(Production), and 5000 for development mode
